@@ -11,3 +11,8 @@ def hello():
 def help_page():
     """A route that returns the help page."""
     return render_template('help.html')
+
+@app.errorhandler(404)
+def page_not_found(e):
+    """Custom 404 error handler."""
+    return render_template('404.html'), 404
