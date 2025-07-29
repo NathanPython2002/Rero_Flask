@@ -6,3 +6,8 @@ app = Flask(__name__)
 def hello():
     """A simple route that returns Hello Rero+."""
     return render_template('index.html')
+
+@app.route("/help")
+def help_page():
+    """A route that returns the help page."""
+    return render_template('help.html')
