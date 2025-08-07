@@ -8,4 +8,14 @@ dependencies = [
     "flask>=3.1.1",
 ]
 [tool.poe.tasks]
-start = "flask --app app run --host 0.0.0.0 --port 8000"
+start = "flask --app app.py run --host 0.0.0.0 --port 8000"
+test = "pytest"
+
+
+[tool.poe.env]
+FLASK_ENV = "development"
+
+
+[project.optional-dependencies]
+dev = ["poethepoet>=0.25.0"]
+
